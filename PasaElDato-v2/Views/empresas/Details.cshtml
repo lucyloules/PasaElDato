@@ -1,0 +1,82 @@
+﻿@model PasaElDato_v2.Models.empresa
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>empresa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rut)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rut)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.giro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.giro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.historia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.historia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.path_imagenempresa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.path_imagenempresa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.link)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.link)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.path_imagen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.path_imagen)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idempresa }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

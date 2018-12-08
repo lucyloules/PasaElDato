@@ -1,0 +1,152 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<!-- CARRUSEL NMOTELES -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="first-slide diseno" src="~/Content/img/Carrusel/aerotel.jpg" alt="First slide">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1 class="text-white">Aerotel</h1>
+                    <p>Habitaciones de lujo</p>
+                    <!--     <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img class="second-slide diseno" src="~/Content/img/Carrusel/catedral-web-jacuzzi-32.jpg"
+                 alt="Second slide">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Motel Catedral</h1>
+                    <p>En Pleno centro de Santiago</p>
+                    <!--  <p><a class="btn btn-lg btn-primary" href="#" role="button">Ver</a></p> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img class="third-slide diseno" src="~/Content/img/Carrusel/motel-lacascada_2habitaciones_img1.jpg"
+                 alt="Third slide">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Motel La Cascada</h1>
+                    <p>Confort y encanto de un establecimiento excepcional.</p>
+                    <!--             <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img class="Fourth-slide diseno" src="~/Content/img/Carrusel/MotelSky.jpg" alt="Fourth slide">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Motel Sky</h1>
+                    <p>
+                        Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at
+                        eget
+                        metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+                    </p>
+                    <!--             <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p> -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Pre</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<!-- /CARRUSEL MOTELES -->
+
+<!-- CATEGORIAS MOTELES -->
+<section id="Categorias" class="container">
+    <div class="card-deck row">
+
+        <div class="card col-sm-12 col-md-6 px-0">
+            <img class="card-img-top img-fluid grande" src="http://www.hotelzeus.cl/wp-content/uploads/2014/10/Zeus-3.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title text-danger">Motel Zeus</h5>
+                <p class="card-text">Ambientación temática.</p>
+                <p class="card-text"><small class="text-muted">Ver</small></p>
+            </div>
+        </div>
+
+        <div class="card col-sm-12 col-md-6 px-0">
+            <img class="card-img-top img-fluid grande" src="https://www.solyluna.cl/img/suite.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title text-danger">Sol Y Luna</h5>
+                <p class="card-text">
+                    Con basta experiencia en el rubro de moteles. Hemos tenido los mas
+                    exigentes clientes y eso nos hace mejorar día a día.
+                </p>
+                <p class="card-text"><a class="text-danger" href="#">Ver</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="#noticias" class="container">
+    <div class="row text-danger">
+        <div class="col-md-6 blog-main">
+            <h3 class="pb-3 mb-4 border-bottom">
+                Noticias u otras novedades
+            </h3>
+        </div>
+        <div class="col-md-6 blog-main">
+            <h3 class="pb-3 mb-4 border-bottom">
+                foto
+            </h3>
+        </div>
+    </div>
+</section>
+
+<!-- otras secciones -->
+<section id="servicios" class="container-fluid py-5 bg-passion text-white  clearfix">
+    <h2 class="text-center ">Servicios de nuestros asociados</h2>
+    <div class="card-group">
+        <div class="card text-danger text-center">
+            <h2><i class="fas fa-glass-martini-alt"></i></h2>
+            <div class="card-body">
+                <h5 class="card-title">Bar y Menú</h5>
+                <p class="card-text">Amplia carta de servicios</p>
+
+            </div>
+        </div>
+        <div class="card text-danger text-center">
+            <!--  <img class="card-img-top circle" src=".../100px180/" alt="Card image cap"> -->
+            <h2><i class="fas fa-car"></i></h2>
+            <div class="card-body">
+                <h5 class="card-title">Estacionamiento Privado</h5>
+                <p class="card-text">Capacidad para 2 vecículos</p>
+
+            </div>
+        </div>
+        <div class="card text-danger text-center">
+            <h2><i class="fas fa-wind"></i></h2>
+            <div class="card-body">
+                <h5 class="card-title">Máximo Confort</h5>
+                <p class="card-text">Habitaciones climátizadas, canales Premium, Música Ambiental</p>
+
+            </div>
+        </div>
+    </div>
+</section>
+

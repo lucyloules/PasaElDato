@@ -1,0 +1,34 @@
+﻿@model PasaElDato_v2.Models.telefono
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>telefono</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.telefono1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefono1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sucursal.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sucursal.nombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idtelefono }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

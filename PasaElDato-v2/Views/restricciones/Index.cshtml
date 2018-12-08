@@ -1,0 +1,63 @@
+﻿@model IEnumerable<PasaElDato_v2.Models.restricciones>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.restriccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.descripcion_horario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.descripcion_fecha)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idproducto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idsucursal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.precio)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.restriccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.descripcion_horario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.descripcion_fecha)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idproducto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idsucursal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.precio)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idrestriccion }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idrestriccion }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idrestriccion })
+        </td>
+    </tr>
+}
+
+</table>

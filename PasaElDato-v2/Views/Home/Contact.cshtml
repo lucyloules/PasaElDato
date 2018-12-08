@@ -1,0 +1,45 @@
+﻿<!-- FORMULARIO DE CONTACTO Y GOOGLE MAPS -->
+<section id="contacto" class="bg-love container-fluid">
+    <article class="fixedwrap py-3">
+        <h2 class="text-center text-danger">
+            ¡Contáctanos!
+        </h2>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <iframe class="" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d106511.31572087554!2d-70.69807819872213!3d-33.46288781000812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1smoteles%2C+Region+Metropolitana!5e0!3m2!1ses-419!2scl!4v1543471828453"
+                            frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+
+                <div class="col-sm-12 col-md-12 col-lg-6">
+                    <h3 class="text-danger text-center">Formulario</h3>
+
+                    <form id="form-contacto" method="post" action="contacto.php">
+                        <label>Nombre completo</label>
+                        <input type="text" name="nombre" id="nombre" class="form-control"/>
+                     
+                        <label>Correo</label>
+                        <input type="text" name="email" id="email" class="form-control"/>
+
+                        <label>Asunto (requerido)</label>
+
+                        <select name="asunto" id="asunto" class="form-control chosen-select">
+                            <option value="Otro">Seleccione...</option>
+                            <option value="Contacto">Contacto</option>
+                            <option value="Sugerencia">Sugerencia</option>
+                            <option value="Reclamo">Reclamo</option>
+                        </select>
+
+                        <label>Mensaje</label>
+                        <textarea name="mensaje" id="mensaje" class="form-control"></textarea>
+
+                        <div id="botonsubmit">
+                            <input type="submit" class="btn btn-send btn-danger" value="Enviar"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </article>
+</section>
+

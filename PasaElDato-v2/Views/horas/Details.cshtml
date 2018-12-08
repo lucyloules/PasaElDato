@@ -1,0 +1,50 @@
+﻿@model PasaElDato_v2.Models.horas
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>horas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.dia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.hora)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hora)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fecha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.estado.estado1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estado.estado1)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idhora }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

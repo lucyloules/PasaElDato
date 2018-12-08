@@ -1,0 +1,26 @@
+﻿@model PasaElDato_v2.Models.servicio_motel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>servicio_motel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcion_serviciomotel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcion_serviciomotel)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idserviciomotel }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

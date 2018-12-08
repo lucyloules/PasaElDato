@@ -1,0 +1,34 @@
+﻿@model PasaElDato_v2.Models.tipohabitacion_x_sucursal
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tipohabitacion_x_sucursal</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.sucursal.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sucursal.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tipo_habitacion.descripcion_tipohabitacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tipo_habitacion.descripcion_tipohabitacion)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,689 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="pasaelda_PasaelDatoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="categoria">
+    <Key>
+      <PropertyRef Name="idcategoria" />
+    </Key>
+    <Property Name="idcategoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="categoria1" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="puntaje_x_categoria" Relationship="Self.Relationship43" FromRole="categoria" ToRole="puntaje_x_categoria" />
+  </EntityType>
+  <EntityType Name="comentario">
+    <Key>
+      <PropertyRef Name="idcomentario" />
+    </Key>
+    <Property Name="idcomentario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="comentario1" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="fecha" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="idpuntaje" Type="Int32" />
+    <Property Name="idusuario" Type="Int32" />
+    <Property Name="idcategoria" Type="Int32" />
+    <NavigationProperty Name="usuario" Relationship="Self.FK_comentario_usuario" FromRole="comentario" ToRole="usuario" />
+    <NavigationProperty Name="puntaje_x_categoria" Relationship="Self.Relationship44" FromRole="comentario" ToRole="puntaje_x_categoria" />
+    <NavigationProperty Name="producto" Relationship="Self.comentario_x_producto" FromRole="comentario" ToRole="producto" />
+    <NavigationProperty Name="sucursal" Relationship="Self.comentario_x_sucursal" FromRole="comentario" ToRole="sucursal" />
+  </EntityType>
+  <EntityType Name="comuna">
+    <Key>
+      <PropertyRef Name="idcomuna" />
+    </Key>
+    <Property Name="idcomuna" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="comuna1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="idregion" Type="Int32" />
+    <NavigationProperty Name="region" Relationship="Self.Relationship7" FromRole="comuna" ToRole="region" />
+    <NavigationProperty Name="direccion" Relationship="Self.Relationship8" FromRole="comuna" ToRole="direccion" />
+  </EntityType>
+  <EntityType Name="direccion">
+    <Key>
+      <PropertyRef Name="iddireccion" />
+    </Key>
+    <Property Name="iddireccion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="direccion1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="numero" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="idcomuna" Type="Int32" />
+    <Property Name="idsucursal" Type="Int32" />
+    <NavigationProperty Name="comuna" Relationship="Self.Relationship8" FromRole="direccion" ToRole="comuna" />
+    <NavigationProperty Name="sucursal" Relationship="Self.Relationship9" FromRole="direccion" ToRole="sucursal" />
+  </EntityType>
+  <EntityType Name="email">
+    <Key>
+      <PropertyRef Name="idemail" />
+    </Key>
+    <Property Name="idemail" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="email1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="idsucursal" Type="Int32" />
+    <NavigationProperty Name="sucursal" Relationship="Self.Relationship45" FromRole="email" ToRole="sucursal" />
+  </EntityType>
+  <EntityType Name="empresa">
+    <Key>
+      <PropertyRef Name="idempresa" />
+    </Key>
+    <Property Name="idempresa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="rut" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="giro" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="historia" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="path_imagenempresa" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="link" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="descripcion" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="path_imagen" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="sucursal" Relationship="Self.Relationship6" FromRole="empresa" ToRole="sucursal" />
+  </EntityType>
+  <EntityType Name="estado">
+    <Key>
+      <PropertyRef Name="idestado" />
+    </Key>
+    <Property Name="idestado" Type="Int32" Nullable="false" />
+    <Property Name="estado1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="horas" Relationship="Self.FK_horas_estado" FromRole="estado" ToRole="horas" />
+  </EntityType>
+  <EntityType Name="horas">
+    <Key>
+      <PropertyRef Name="idhora" />
+    </Key>
+    <Property Name="idhora" Type="Int32" Nullable="false" />
+    <Property Name="dia" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="hora" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fecha" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="idestado" Type="Int32" />
+    <NavigationProperty Name="estado" Relationship="Self.FK_horas_estado" FromRole="horas" ToRole="estado" />
+    <NavigationProperty Name="reserva" Relationship="Self.FK_reserva_horas" FromRole="horas" ToRole="reserva" />
+  </EntityType>
+  <EntityType Name="imagen_producto">
+    <Key>
+      <PropertyRef Name="idimagenproducto" />
+    </Key>
+    <Property Name="idimagenproducto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="path_imagenproducto" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="producto" Relationship="Self.imagen_x_producto" FromRole="imagen_producto" ToRole="producto" />
+  </EntityType>
+  <EntityType Name="imagen_sucursal">
+    <Key>
+      <PropertyRef Name="idimagensucursal" />
+    </Key>
+    <Property Name="idimagensucursal" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="path_imagensucursal" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="idsucursal" Type="Int32" />
+    <NavigationProperty Name="sucursal" Relationship="Self.Relationship15" FromRole="imagen_sucursal" ToRole="sucursal" />
+  </EntityType>
+  <EntityType Name="medios_pago">
+    <Key>
+      <PropertyRef Name="idpago" />
+    </Key>
+    <Property Name="idpago" Type="Int32" Nullable="false" />
+    <Property Name="tipo_pago" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="producto">
+    <Key>
+      <PropertyRef Name="idproducto" />
+    </Key>
+    <Property Name="idproducto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion_producto" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="fecha_ini" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="fecha_fin" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="idrestriccion" Type="Int32" />
+    <Property Name="idsucursal" Type="Int32" />
+    <Property Name="idtipo_habitacion" Type="Int32" />
+    <Property Name="precio1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="precio2" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="idusuario" Type="Int32" />
+    <Property Name="descuento" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="usuario" Relationship="Self.FK_producto_usuario" FromRole="producto" ToRole="usuario" />
+    <NavigationProperty Name="reserva" Relationship="Self.FK_reserva_producto" FromRole="producto" ToRole="reserva" />
+    <NavigationProperty Name="tipohabitacion_x_sucursal" Relationship="Self.Relationship14" FromRole="producto" ToRole="tipohabitacion_x_sucursal" />
+    <NavigationProperty Name="restricciones" Relationship="Self.Relationship25" FromRole="producto" ToRole="restricciones" />
+    <NavigationProperty Name="comentario" Relationship="Self.comentario_x_producto" FromRole="producto" ToRole="comentario" />
+    <NavigationProperty Name="imagen_producto" Relationship="Self.imagen_x_producto" FromRole="producto" ToRole="imagen_producto" />
+    <NavigationProperty Name="servicio_habitacion" Relationship="Self.servicio_x_producto" FromRole="producto" ToRole="servicio_habitacion" />
+  </EntityType>
+  <EntityType Name="puntaje">
+    <Key>
+      <PropertyRef Name="idpuntaje" />
+    </Key>
+    <Property Name="idpuntaje" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="puntaje1" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="puntaje_x_categoria" Relationship="Self.Relationship42" FromRole="puntaje" ToRole="puntaje_x_categoria" />
+  </EntityType>
+  <EntityType Name="puntaje_x_categoria">
+    <Key>
+      <PropertyRef Name="idpuntaje" />
+      <PropertyRef Name="idcategoria" />
+    </Key>
+    <Property Name="idpuntaje" Type="Int32" Nullable="false" />
+    <Property Name="idcategoria" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="categoria" Relationship="Self.Relationship43" FromRole="puntaje_x_categoria" ToRole="categoria" />
+    <NavigationProperty Name="comentario" Relationship="Self.Relationship44" FromRole="puntaje_x_categoria" ToRole="comentario" />
+    <NavigationProperty Name="puntaje" Relationship="Self.Relationship42" FromRole="puntaje_x_categoria" ToRole="puntaje" />
+  </EntityType>
+  <EntityType Name="region">
+    <Key>
+      <PropertyRef Name="idregion" />
+    </Key>
+    <Property Name="idregion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="region1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="comuna" Relationship="Self.Relationship7" FromRole="region" ToRole="comuna" />
+  </EntityType>
+  <EntityType Name="reserva">
+    <Key>
+      <PropertyRef Name="idreserva" />
+    </Key>
+    <Property Name="idreserva" Type="Int32" Nullable="false" />
+    <Property Name="idusuario" Type="Int32" />
+    <Property Name="idproducto" Type="Int32" />
+    <Property Name="idhora" Type="Int32" />
+    <NavigationProperty Name="horas" Relationship="Self.FK_reserva_horas" FromRole="reserva" ToRole="horas" />
+    <NavigationProperty Name="producto" Relationship="Self.FK_reserva_producto" FromRole="reserva" ToRole="producto" />
+    <NavigationProperty Name="usuario" Relationship="Self.FK_reserva_usuario" FromRole="reserva" ToRole="usuario" />
+  </EntityType>
+  <EntityType Name="restricciones">
+    <Key>
+      <PropertyRef Name="idrestriccion" />
+    </Key>
+    <Property Name="idrestriccion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="restriccion" Type="String" MaxLength="600" FixedLength="false" Unicode="false" />
+    <Property Name="descripcion_horario" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="descripcion_fecha" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="idproducto" Type="Int32" />
+    <Property Name="idsucursal" Type="Int32" />
+    <Property Name="precio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="producto" Relationship="Self.Relationship25" FromRole="restricciones" ToRole="producto" />
+  </EntityType>
+  <EntityType Name="servicio_habitacion">
+    <Key>
+      <PropertyRef Name="idserviciohabitacion" />
+    </Key>
+    <Property Name="idserviciohabitacion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descriocion_serviciohabitacion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="producto" Relationship="Self.servicio_x_producto" FromRole="servicio_habitacion" ToRole="producto" />
+  </EntityType>
+  <EntityType Name="servicio_motel">
+    <Key>
+      <PropertyRef Name="idserviciomotel" />
+    </Key>
+    <Property Name="idserviciomotel" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion_serviciomotel" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="sucursal" Relationship="Self.servicio_sucursal" FromRole="servicio_motel" ToRole="sucursal" />
+  </EntityType>
+  <EntityType Name="sucursal">
+    <Key>
+      <PropertyRef Name="idsucursal" />
+    </Key>
+    <Property Name="idsucursal" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="idempresa" Type="Int32" />
+    <NavigationProperty Name="direccion" Relationship="Self.Relationship9" FromRole="sucursal" ToRole="direccion" />
+    <NavigationProperty Name="email" Relationship="Self.Relationship45" FromRole="sucursal" ToRole="email" />
+    <NavigationProperty Name="empresa" Relationship="Self.Relationship6" FromRole="sucursal" ToRole="empresa" />
+    <NavigationProperty Name="imagen_sucursal" Relationship="Self.Relationship15" FromRole="sucursal" ToRole="imagen_sucursal" />
+    <NavigationProperty Name="tipohabitacion_x_sucursal" Relationship="Self.Relationship12" FromRole="sucursal" ToRole="tipohabitacion_x_sucursal" />
+    <NavigationProperty Name="telefono" Relationship="Self.Relationship46" FromRole="sucursal" ToRole="telefono" />
+    <NavigationProperty Name="comentario" Relationship="Self.comentario_x_sucursal" FromRole="sucursal" ToRole="comentario" />
+    <NavigationProperty Name="servicio_motel" Relationship="Self.servicio_sucursal" FromRole="sucursal" ToRole="servicio_motel" />
+  </EntityType>
+  <EntityType Name="telefono">
+    <Key>
+      <PropertyRef Name="idtelefono" />
+    </Key>
+    <Property Name="idtelefono" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="telefono1" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="idsucursal" Type="Int32" />
+    <NavigationProperty Name="sucursal" Relationship="Self.Relationship46" FromRole="telefono" ToRole="sucursal" />
+  </EntityType>
+  <EntityType Name="tipo_habitacion">
+    <Key>
+      <PropertyRef Name="idtipo_habitacion" />
+    </Key>
+    <Property Name="idtipo_habitacion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="descripcion_tipohabitacion" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="link" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tipohabitacion_x_sucursal" Relationship="Self.Relationship13" FromRole="tipo_habitacion" ToRole="tipohabitacion_x_sucursal" />
+  </EntityType>
+  <EntityType Name="tipo_usuario">
+    <Key>
+      <PropertyRef Name="idtipousuario" />
+    </Key>
+    <Property Name="idtipousuario" Type="Int32" Nullable="false" />
+    <Property Name="tipo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="usuario" Relationship="Self.FK_usuario_tipo_usuario" FromRole="tipo_usuario" ToRole="usuario" />
+  </EntityType>
+  <EntityType Name="tipohabitacion_x_sucursal">
+    <Key>
+      <PropertyRef Name="idsucursal" />
+      <PropertyRef Name="idtipo_habitacion" />
+    </Key>
+    <Property Name="idsucursal" Type="Int32" Nullable="false" />
+    <Property Name="idtipo_habitacion" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="producto" Relationship="Self.Relationship14" FromRole="tipohabitacion_x_sucursal" ToRole="producto" />
+    <NavigationProperty Name="sucursal" Relationship="Self.Relationship12" FromRole="tipohabitacion_x_sucursal" ToRole="sucursal" />
+    <NavigationProperty Name="tipo_habitacion" Relationship="Self.Relationship13" FromRole="tipohabitacion_x_sucursal" ToRole="tipo_habitacion" />
+  </EntityType>
+  <EntityType Name="usuario">
+    <Key>
+      <PropertyRef Name="idusuario" />
+    </Key>
+    <Property Name="idusuario" Type="Int32" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="apellido" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="contrasena" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="idtipousuario" Type="Int32" />
+    <NavigationProperty Name="comentario" Relationship="Self.FK_comentario_usuario" FromRole="usuario" ToRole="comentario" />
+    <NavigationProperty Name="producto" Relationship="Self.FK_producto_usuario" FromRole="usuario" ToRole="producto" />
+    <NavigationProperty Name="reserva" Relationship="Self.FK_reserva_usuario" FromRole="usuario" ToRole="reserva" />
+    <NavigationProperty Name="tipo_usuario" Relationship="Self.FK_usuario_tipo_usuario" FromRole="usuario" ToRole="tipo_usuario" />
+  </EntityType>
+  <Association Name="Relationship43">
+    <End Role="categoria" Type="Self.categoria" Multiplicity="1" />
+    <End Role="puntaje_x_categoria" Type="Self.puntaje_x_categoria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="categoria">
+        <PropertyRef Name="idcategoria" />
+      </Principal>
+      <Dependent Role="puntaje_x_categoria">
+        <PropertyRef Name="idcategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_comentario_usuario">
+    <End Role="usuario" Type="Self.usuario" Multiplicity="0..1" />
+    <End Role="comentario" Type="Self.comentario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usuario">
+        <PropertyRef Name="idusuario" />
+      </Principal>
+      <Dependent Role="comentario">
+        <PropertyRef Name="idusuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship44">
+    <End Role="puntaje_x_categoria" Type="Self.puntaje_x_categoria" Multiplicity="0..1" />
+    <End Role="comentario" Type="Self.comentario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="puntaje_x_categoria">
+        <PropertyRef Name="idpuntaje" />
+        <PropertyRef Name="idcategoria" />
+      </Principal>
+      <Dependent Role="comentario">
+        <PropertyRef Name="idpuntaje" />
+        <PropertyRef Name="idcategoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship7">
+    <End Role="region" Type="Self.region" Multiplicity="0..1" />
+    <End Role="comuna" Type="Self.comuna" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="region">
+        <PropertyRef Name="idregion" />
+      </Principal>
+      <Dependent Role="comuna">
+        <PropertyRef Name="idregion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship8">
+    <End Role="comuna" Type="Self.comuna" Multiplicity="0..1" />
+    <End Role="direccion" Type="Self.direccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="comuna">
+        <PropertyRef Name="idcomuna" />
+      </Principal>
+      <Dependent Role="direccion">
+        <PropertyRef Name="idcomuna" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship9">
+    <End Role="sucursal" Type="Self.sucursal" Multiplicity="0..1" />
+    <End Role="direccion" Type="Self.direccion" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sucursal">
+        <PropertyRef Name="idsucursal" />
+      </Principal>
+      <Dependent Role="direccion">
+        <PropertyRef Name="idsucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship45">
+    <End Role="sucursal" Type="Self.sucursal" Multiplicity="0..1" />
+    <End Role="email" Type="Self.email" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sucursal">
+        <PropertyRef Name="idsucursal" />
+      </Principal>
+      <Dependent Role="email">
+        <PropertyRef Name="idsucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship6">
+    <End Role="empresa" Type="Self.empresa" Multiplicity="0..1" />
+    <End Role="sucursal" Type="Self.sucursal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="empresa">
+        <PropertyRef Name="idempresa" />
+      </Principal>
+      <Dependent Role="sucursal">
+        <PropertyRef Name="idempresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_horas_estado">
+    <End Role="estado" Type="Self.estado" Multiplicity="0..1" />
+    <End Role="horas" Type="Self.horas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="estado">
+        <PropertyRef Name="idestado" />
+      </Principal>
+      <Dependent Role="horas">
+        <PropertyRef Name="idestado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_reserva_horas">
+    <End Role="horas" Type="Self.horas" Multiplicity="0..1" />
+    <End Role="reserva" Type="Self.reserva" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="horas">
+        <PropertyRef Name="idhora" />
+      </Principal>
+      <Dependent Role="reserva">
+        <PropertyRef Name="idhora" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship15">
+    <End Role="sucursal" Type="Self.sucursal" Multiplicity="0..1" />
+    <End Role="imagen_sucursal" Type="Self.imagen_sucursal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sucursal">
+        <PropertyRef Name="idsucursal" />
+      </Principal>
+      <Dependent Role="imagen_sucursal">
+        <PropertyRef Name="idsucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_producto_usuario">
+    <End Role="usuario" Type="Self.usuario" Multiplicity="0..1" />
+    <End Role="producto" Type="Self.producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usuario">
+        <PropertyRef Name="idusuario" />
+      </Principal>
+      <Dependent Role="producto">
+        <PropertyRef Name="idusuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_reserva_producto">
+    <End Role="producto" Type="Self.producto" Multiplicity="0..1" />
+    <End Role="reserva" Type="Self.reserva" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="producto">
+        <PropertyRef Name="idproducto" />
+      </Principal>
+      <Dependent Role="reserva">
+        <PropertyRef Name="idproducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship14">
+    <End Role="tipohabitacion_x_sucursal" Type="Self.tipohabitacion_x_sucursal" Multiplicity="0..1" />
+    <End Role="producto" Type="Self.producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tipohabitacion_x_sucursal">
+        <PropertyRef Name="idsucursal" />
+        <PropertyRef Name="idtipo_habitacion" />
+      </Principal>
+      <Dependent Role="producto">
+        <PropertyRef Name="idsucursal" />
+        <PropertyRef Name="idtipo_habitacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship25">
+    <End Role="restricciones" Type="Self.restricciones" Multiplicity="0..1" />
+    <End Role="producto" Type="Self.producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="restricciones">
+        <PropertyRef Name="idrestriccion" />
+      </Principal>
+      <Dependent Role="producto">
+        <PropertyRef Name="idrestriccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship42">
+    <End Role="puntaje" Type="Self.puntaje" Multiplicity="1" />
+    <End Role="puntaje_x_categoria" Type="Self.puntaje_x_categoria" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="puntaje">
+        <PropertyRef Name="idpuntaje" />
+      </Principal>
+      <Dependent Role="puntaje_x_categoria">
+        <PropertyRef Name="idpuntaje" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_reserva_usuario">
+    <End Role="usuario" Type="Self.usuario" Multiplicity="0..1" />
+    <End Role="reserva" Type="Self.reserva" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="usuario">
+        <PropertyRef Name="idusuario" />
+      </Principal>
+      <Dependent Role="reserva">
+        <PropertyRef Name="idusuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship12">
+    <End Role="sucursal" Type="Self.sucursal" Multiplicity="1" />
+    <End Role="tipohabitacion_x_sucursal" Type="Self.tipohabitacion_x_sucursal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sucursal">
+        <PropertyRef Name="idsucursal" />
+      </Principal>
+      <Dependent Role="tipohabitacion_x_sucursal">
+        <PropertyRef Name="idsucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship46">
+    <End Role="sucursal" Type="Self.sucursal" Multiplicity="0..1" />
+    <End Role="telefono" Type="Self.telefono" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="sucursal">
+        <PropertyRef Name="idsucursal" />
+      </Principal>
+      <Dependent Role="telefono">
+        <PropertyRef Name="idsucursal" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="Relationship13">
+    <End Role="tipo_habitacion" Type="Self.tipo_habitacion" Multiplicity="1" />
+    <End Role="tipohabitacion_x_sucursal" Type="Self.tipohabitacion_x_sucursal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tipo_habitacion">
+        <PropertyRef Name="idtipo_habitacion" />
+      </Principal>
+      <Dependent Role="tipohabitacion_x_sucursal">
+        <PropertyRef Name="idtipo_habitacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_usuario_tipo_usuario">
+    <End Role="tipo_usuario" Type="Self.tipo_usuario" Multiplicity="0..1" />
+    <End Role="usuario" Type="Self.usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tipo_usuario">
+        <PropertyRef Name="idtipousuario" />
+      </Principal>
+      <Dependent Role="usuario">
+        <PropertyRef Name="idtipousuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="comentario_x_producto">
+    <End Role="producto" Type="Self.producto" Multiplicity="*" />
+    <End Role="comentario" Type="Self.comentario" Multiplicity="*" />
+  </Association>
+  <Association Name="comentario_x_sucursal">
+    <End Role="comentario" Type="Self.comentario" Multiplicity="*" />
+    <End Role="sucursal" Type="Self.sucursal" Multiplicity="*" />
+  </Association>
+  <Association Name="imagen_x_producto">
+    <End Role="producto" Type="Self.producto" Multiplicity="*" />
+    <End Role="imagen_producto" Type="Self.imagen_producto" Multiplicity="*" />
+  </Association>
+  <Association Name="servicio_sucursal">
+    <End Role="sucursal" Type="Self.sucursal" Multiplicity="*" />
+    <End Role="servicio_motel" Type="Self.servicio_motel" Multiplicity="*" />
+  </Association>
+  <Association Name="servicio_x_producto">
+    <End Role="producto" Type="Self.producto" Multiplicity="*" />
+    <End Role="servicio_habitacion" Type="Self.servicio_habitacion" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="pasaelda_PasaelDatoEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="categoria" EntityType="Self.categoria" />
+    <EntitySet Name="comentario" EntityType="Self.comentario" />
+    <EntitySet Name="comuna" EntityType="Self.comuna" />
+    <EntitySet Name="direccion" EntityType="Self.direccion" />
+    <EntitySet Name="email" EntityType="Self.email" />
+    <EntitySet Name="empresa" EntityType="Self.empresa" />
+    <EntitySet Name="estado" EntityType="Self.estado" />
+    <EntitySet Name="horas" EntityType="Self.horas" />
+    <EntitySet Name="imagen_producto" EntityType="Self.imagen_producto" />
+    <EntitySet Name="imagen_sucursal" EntityType="Self.imagen_sucursal" />
+    <EntitySet Name="medios_pago" EntityType="Self.medios_pago" />
+    <EntitySet Name="producto" EntityType="Self.producto" />
+    <EntitySet Name="puntaje" EntityType="Self.puntaje" />
+    <EntitySet Name="puntaje_x_categoria" EntityType="Self.puntaje_x_categoria" />
+    <EntitySet Name="region" EntityType="Self.region" />
+    <EntitySet Name="reserva" EntityType="Self.reserva" />
+    <EntitySet Name="restricciones" EntityType="Self.restricciones" />
+    <EntitySet Name="servicio_habitacion" EntityType="Self.servicio_habitacion" />
+    <EntitySet Name="servicio_motel" EntityType="Self.servicio_motel" />
+    <EntitySet Name="sucursal" EntityType="Self.sucursal" />
+    <EntitySet Name="telefono" EntityType="Self.telefono" />
+    <EntitySet Name="tipo_habitacion" EntityType="Self.tipo_habitacion" />
+    <EntitySet Name="tipo_usuario" EntityType="Self.tipo_usuario" />
+    <EntitySet Name="tipohabitacion_x_sucursal" EntityType="Self.tipohabitacion_x_sucursal" />
+    <EntitySet Name="usuario" EntityType="Self.usuario" />
+    <AssociationSet Name="Relationship43" Association="Self.Relationship43">
+      <End Role="categoria" EntitySet="categoria" />
+      <End Role="puntaje_x_categoria" EntitySet="puntaje_x_categoria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_comentario_usuario" Association="Self.FK_comentario_usuario">
+      <End Role="usuario" EntitySet="usuario" />
+      <End Role="comentario" EntitySet="comentario" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship44" Association="Self.Relationship44">
+      <End Role="puntaje_x_categoria" EntitySet="puntaje_x_categoria" />
+      <End Role="comentario" EntitySet="comentario" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship7" Association="Self.Relationship7">
+      <End Role="region" EntitySet="region" />
+      <End Role="comuna" EntitySet="comuna" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship8" Association="Self.Relationship8">
+      <End Role="comuna" EntitySet="comuna" />
+      <End Role="direccion" EntitySet="direccion" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship9" Association="Self.Relationship9">
+      <End Role="sucursal" EntitySet="sucursal" />
+      <End Role="direccion" EntitySet="direccion" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship45" Association="Self.Relationship45">
+      <End Role="sucursal" EntitySet="sucursal" />
+      <End Role="email" EntitySet="email" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship6" Association="Self.Relationship6">
+      <End Role="empresa" EntitySet="empresa" />
+      <End Role="sucursal" EntitySet="sucursal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_horas_estado" Association="Self.FK_horas_estado">
+      <End Role="estado" EntitySet="estado" />
+      <End Role="horas" EntitySet="horas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_reserva_horas" Association="Self.FK_reserva_horas">
+      <End Role="horas" EntitySet="horas" />
+      <End Role="reserva" EntitySet="reserva" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship15" Association="Self.Relationship15">
+      <End Role="sucursal" EntitySet="sucursal" />
+      <End Role="imagen_sucursal" EntitySet="imagen_sucursal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_producto_usuario" Association="Self.FK_producto_usuario">
+      <End Role="usuario" EntitySet="usuario" />
+      <End Role="producto" EntitySet="producto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_reserva_producto" Association="Self.FK_reserva_producto">
+      <End Role="producto" EntitySet="producto" />
+      <End Role="reserva" EntitySet="reserva" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship14" Association="Self.Relationship14">
+      <End Role="tipohabitacion_x_sucursal" EntitySet="tipohabitacion_x_sucursal" />
+      <End Role="producto" EntitySet="producto" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship25" Association="Self.Relationship25">
+      <End Role="restricciones" EntitySet="restricciones" />
+      <End Role="producto" EntitySet="producto" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship42" Association="Self.Relationship42">
+      <End Role="puntaje" EntitySet="puntaje" />
+      <End Role="puntaje_x_categoria" EntitySet="puntaje_x_categoria" />
+    </AssociationSet>
+    <AssociationSet Name="FK_reserva_usuario" Association="Self.FK_reserva_usuario">
+      <End Role="usuario" EntitySet="usuario" />
+      <End Role="reserva" EntitySet="reserva" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship12" Association="Self.Relationship12">
+      <End Role="sucursal" EntitySet="sucursal" />
+      <End Role="tipohabitacion_x_sucursal" EntitySet="tipohabitacion_x_sucursal" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship46" Association="Self.Relationship46">
+      <End Role="sucursal" EntitySet="sucursal" />
+      <End Role="telefono" EntitySet="telefono" />
+    </AssociationSet>
+    <AssociationSet Name="Relationship13" Association="Self.Relationship13">
+      <End Role="tipo_habitacion" EntitySet="tipo_habitacion" />
+      <End Role="tipohabitacion_x_sucursal" EntitySet="tipohabitacion_x_sucursal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_usuario_tipo_usuario" Association="Self.FK_usuario_tipo_usuario">
+      <End Role="tipo_usuario" EntitySet="tipo_usuario" />
+      <End Role="usuario" EntitySet="usuario" />
+    </AssociationSet>
+    <AssociationSet Name="comentario_x_producto" Association="Self.comentario_x_producto">
+      <End Role="producto" EntitySet="producto" />
+      <End Role="comentario" EntitySet="comentario" />
+    </AssociationSet>
+    <AssociationSet Name="comentario_x_sucursal" Association="Self.comentario_x_sucursal">
+      <End Role="comentario" EntitySet="comentario" />
+      <End Role="sucursal" EntitySet="sucursal" />
+    </AssociationSet>
+    <AssociationSet Name="imagen_x_producto" Association="Self.imagen_x_producto">
+      <End Role="producto" EntitySet="producto" />
+      <End Role="imagen_producto" EntitySet="imagen_producto" />
+    </AssociationSet>
+    <AssociationSet Name="servicio_sucursal" Association="Self.servicio_sucursal">
+      <End Role="sucursal" EntitySet="sucursal" />
+      <End Role="servicio_motel" EntitySet="servicio_motel" />
+    </AssociationSet>
+    <AssociationSet Name="servicio_x_producto" Association="Self.servicio_x_producto">
+      <End Role="producto" EntitySet="producto" />
+      <End Role="servicio_habitacion" EntitySet="servicio_habitacion" />
+    </AssociationSet>
+    <FunctionImport Name="MenuIndex" ReturnType="Collection(pasaelda_PasaelDatoModel.MenuIndex_Result)" />
+  </EntityContainer>
+  <ComplexType Name="MenuIndex_Result">
+    <Property Type="Int32" Name="id" Nullable="true" />
+    <Property Type="Int32" Name="idtipo_habitacion" Nullable="false" />
+    <Property Type="String" Name="descripcion_tipohabitacion" Nullable="true" MaxLength="500" />
+    <Property Type="String" Name="link" Nullable="true" MaxLength="500" />
+  </ComplexType>
+</Schema>

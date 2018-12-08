@@ -1,0 +1,139 @@
+﻿.bg-love{
+  background: #fddbdb;
+}
+.bg-passion{
+  background: #c61231;
+}
+.blog-header {
+  line-height: 1;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.blog-header-logo {
+  font-size: 2rem;
+}
+
+.blog-header-logo:hover {
+  text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Playfair Display", Georgia;
+  color: #c61231;
+}
+
+.display-4 {
+  font-size: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .display-4 {
+    font-size: 3rem;
+  }
+}
+
+
+/* carrusel css */
+.carousel {
+  margin-bottom: 4rem;
+}
+
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+.carousel-item {
+  height: 32rem;
+  background-color: #777;
+}
+
+.carousel-item>img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+}
+
+
+
+
+
+.card-img-right {
+  height: 100%;
+  border-radius: 0 3px 3px 0;
+}
+
+.flex-auto {
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.h-250 {
+  height: 250px;
+}
+
+@media (min-width: 768px) {
+  .h-md-250 {
+    height: 250px;
+  }
+}
+
+/*
+ * Footer
+ */
+.blog-footer {
+  padding: 2.5rem 0;
+  color: #999;
+  text-align: center;
+  border-top: .05rem solid #e5e5e5;
+  background: #aa0923;
+}
+
+/* boton arriba */
+.toTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+
+/* .toTop{
+  bottom: 45px;
+  right: 24px;
+}
+
+.fixed-action-btn {
+  position: fixed;
+  z-index: 998;
+  right: 35px;
+  bottom: 35px;
+  margin-bottom: 0;
+  padding-top: 15px;
+}
+
+.btn-floating i {
+  display: inline-block;
+  width: inherit;
+  text-align: center;
+  color: #fff;
+} */
+/* 
+.waves-effect {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+} */
+
+iframe{
+    width: 100%;
+    height: 400px;
+
+}

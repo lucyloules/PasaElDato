@@ -1,0 +1,33 @@
+﻿@model IEnumerable<PasaElDato_v2.Models.puntaje>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.puntaje1)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.puntaje1)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idpuntaje }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idpuntaje }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idpuntaje })
+        </td>
+    </tr>
+}
+
+</table>

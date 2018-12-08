@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="pasaelda_PasaelDatoModelStoreContainer" CdmEntityContainer="pasaelda_PasaelDatoEntities">
+    <EntitySetMapping Name="categoria">
+      <EntityTypeMapping TypeName="pasaelda_PasaelDatoModel.categoria">
+        <MappingFragment StoreEntitySet="categoria">
+          <ScalarProperty Name="idcategoria" ColumnName="idcategoria" />
+          <ScalarProperty Name="categoria1" ColumnName="categoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="comentario">
+      <EntityTypeMapping TypeName="pasaelda_PasaelDatoModel.comentario">
+        <MappingFragment StoreEntitySet="comentario">
+          <ScalarProperty Name="idcomentario" ColumnName="idcomentario" />
+          <ScalarProperty Name="comentario1" ColumnName="comentario" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="idpuntaje" ColumnName="idpuntaje" />
+          <ScalarProperty Name="idusuario" ColumnName="idusuario" />
+          <ScalarProperty Name="idcategoria" ColumnName="idcategoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="comuna">
+      <EntityTypeMapping TypeName="pasaelda_PasaelDatoModel.comuna">
+        <MappingFragment StoreEntitySet="comuna">
+          <ScalarProperty Name="idcomuna" ColumnName="idcomuna" />
+          <ScalarProperty Name="comuna1" ColumnName="comuna" />
+          <ScalarProperty Name="idregion" ColumnName="idregion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="direccion">
+      <EntityTypeMapping TypeName="pasaelda_PasaelDatoModel.direccion">
+        <MappingFragment StoreEntitySet="direccion">
+          <ScalarProperty Name="iddireccion" ColumnName="iddireccion" />
+          <ScalarProperty Name="direccion1" ColumnName="direccion" />
+          <ScalarProperty Name="numero" ColumnName="numero" />
+          <ScalarProperty Name="idcomuna" ColumnName="idcomuna" />
+          <ScalarProperty Name="idsucursal" ColumnName="idsucursal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="email">
+      <EntityTypeMapping TypeName="pasaelda_PasaelDatoModel.email">
+        <MappingFragment StoreEntitySet="email">
+          <ScalarProperty Name="idemail" ColumnName="idemail" />
+          <ScalarProperty Name="email1" ColumnName="email" />
+          <ScalarProperty Name="idsucursal" ColumnName="idsucursal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="empresa">
+      <EntityTypeMapping TypeName="pasaelda_PasaelDatoModel.empresa">
+        <MappingFragment StoreEntitySet="empresa">
+          <ScalarProperty Name="idempresa" ColumnName="idempresa" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="rut" ColumnName="rut" />
+          <ScalarProperty Name="giro" ColumnName="giro" />
+          <ScalarProperty Name="historia" ColumnName="historia" />
+          <ScalarProperty Name="path_imagenempresa" ColumnName="path_imagenempresa" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="path_imagen" ColumnName="path_imagen" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="estado">
+      <EntityTypeMapping TypeName="pasaelda_PasaelDatoModel.estado">
+        <MappingFragment StoreEntitySet="estado">
+          <ScalarProperty Name="idestado" ColumnName="idestado" />
+          <ScalarProperty Name="estado1" ColumnName="estado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="horas">
+      <EntityTypeMapping TypeName="pasaelda_PasaelDatoModel.horas">
+        <MappingFragment StoreEntitySet="horas">
+          <ScalarProperty Name="idhora" ColumnName="idhora" />
+          <ScalarProperty Name="dia" ColumnName="dia" />
+          <ScalarProperty Name="hora" ColumnName="hora" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="idestado" ColumnName="idestado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="imagen_producto">
+      <EntityTypeMapping TypeName="pasaelda_PasaelDatoModel.imagen_producto">
+        <MappingFragment StoreEntitySet="imagen_producto">
+          <ScalarProperty Name="idimagenproducto" ColumnName="idimagenproducto" />
+          <ScalarProperty Name="path_imagenproducto" ColumnName="path_imagenproducto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="imagen_sucursal">
+      <EntityTypeMapping TypeName="pasaelda_PasaelDatoModel.imagen_sucursal">
+        <MappingFragment StoreEntitySet="imagen_sucursal">
+          <ScalarProperty Name="idimagensucursal" ColumnName="idimagensucursal" />
+          <ScalarProperty Name="path_imagensucursal" ColumnName="path_imagensucursal" />
+          <ScalarProperty Name="idsucursal" ColumnName="idsucursal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="medios_pago">
+      <EntityTypeMapping TypeName="pasaelda_PasaelDatoModel.medios_pago">
+        <MappingFragment StoreEntitySet="medios_pago">
+          <ScalarProperty Name="idpago" ColumnName="idpago" />
+          <ScalarProperty Name="tipo_pago" ColumnName="tipo_pago" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="producto">
+      <EntityTypeMapping TypeName="pasaelda_PasaelDatoModel.producto">
+        <MappingFragment StoreEntitySet="producto">
+          <ScalarProperty Name="idproducto" ColumnName="idproducto" />
+          <ScalarProperty Name="descripcion_producto" ColumnName="descripcion_producto" />
+          <ScalarProperty Name="fecha_ini" ColumnName="fecha_ini" />
+          <ScalarProperty Name="fecha_fin" ColumnName="fecha_fin" />
+          <ScalarProperty Name="idrestriccion" ColumnName="idrestriccion" />
+          <ScalarProperty Name="idsucursal" ColumnName="idsucursal" />
+          <ScalarProperty Name="idtipo_habitacion" ColumnName="idtipo_habitacion" />
+          <ScalarProperty Name="precio1" ColumnName="precio1" />
+          <ScalarProperty Name="precio2" ColumnName="precio2" />
+          <ScalarProperty Name="idusuario" ColumnName="idusuario" />
+          <ScalarProperty Name="descuento" ColumnName="descuento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="puntaje">
+      <EntityTypeMapping TypeName="pasaelda_PasaelDatoModel.puntaje">
+        <MappingFragment StoreEntitySet="puntaje">
+          <ScalarProperty Name="idpuntaje" ColumnName="idpuntaje" />
+          <ScalarProperty Name="puntaje1" ColumnName="puntaje" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="puntaje_x_categoria">
+      <EntityTypeMapping TypeName="pasaelda_PasaelDatoModel.puntaje_x_categoria">
+        <MappingFragment StoreEntitySet="puntaje_x_categoria">
+          <ScalarProperty Name="idpuntaje" ColumnName="idpuntaje" />
+          <ScalarProperty Name="idcategoria" ColumnName="idcategoria" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="region">
+      <EntityTypeMapping TypeName="pasaelda_PasaelDatoModel.region">
+        <MappingFragment StoreEntitySet="region">
+          <ScalarProperty Name="idregion" ColumnName="idregion" />
+          <ScalarProperty Name="region1" ColumnName="region" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="reserva">
+      <EntityTypeMapping TypeName="pasaelda_PasaelDatoModel.reserva">
+        <MappingFragment StoreEntitySet="reserva">
+          <ScalarProperty Name="idreserva" ColumnName="idreserva" />
+          <ScalarProperty Name="idusuario" ColumnName="idusuario" />
+          <ScalarProperty Name="idproducto" ColumnName="idproducto" />
+          <ScalarProperty Name="idhora" ColumnName="idhora" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="restricciones">
+      <EntityTypeMapping TypeName="pasaelda_PasaelDatoModel.restricciones">
+        <MappingFragment StoreEntitySet="restricciones">
+          <ScalarProperty Name="idrestriccion" ColumnName="idrestriccion" />
+          <ScalarProperty Name="restriccion" ColumnName="restriccion" />
+          <ScalarProperty Name="descripcion_horario" ColumnName="descripcion_horario" />
+          <ScalarProperty Name="descripcion_fecha" ColumnName="descripcion_fecha" />
+          <ScalarProperty Name="idproducto" ColumnName="idproducto" />
+          <ScalarProperty Name="idsucursal" ColumnName="idsucursal" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="servicio_habitacion">
+      <EntityTypeMapping TypeName="pasaelda_PasaelDatoModel.servicio_habitacion">
+        <MappingFragment StoreEntitySet="servicio_habitacion">
+          <ScalarProperty Name="idserviciohabitacion" ColumnName="idserviciohabitacion" />
+          <ScalarProperty Name="descriocion_serviciohabitacion" ColumnName="descriocion_serviciohabitacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="servicio_motel">
+      <EntityTypeMapping TypeName="pasaelda_PasaelDatoModel.servicio_motel">
+        <MappingFragment StoreEntitySet="servicio_motel">
+          <ScalarProperty Name="idserviciomotel" ColumnName="idserviciomotel" />
+          <ScalarProperty Name="descripcion_serviciomotel" ColumnName="descripcion_serviciomotel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sucursal">
+      <EntityTypeMapping TypeName="pasaelda_PasaelDatoModel.sucursal">
+        <MappingFragment StoreEntitySet="sucursal">
+          <ScalarProperty Name="idsucursal" ColumnName="idsucursal" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="idempresa" ColumnName="idempresa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="telefono">
+      <EntityTypeMapping TypeName="pasaelda_PasaelDatoModel.telefono">
+        <MappingFragment StoreEntitySet="telefono">
+          <ScalarProperty Name="idtelefono" ColumnName="idtelefono" />
+          <ScalarProperty Name="telefono1" ColumnName="telefono" />
+          <ScalarProperty Name="idsucursal" ColumnName="idsucursal" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tipo_habitacion">
+      <EntityTypeMapping TypeName="pasaelda_PasaelDatoModel.tipo_habitacion">
+        <MappingFragment StoreEntitySet="tipo_habitacion">
+          <ScalarProperty Name="idtipo_habitacion" ColumnName="idtipo_habitacion" />
+          <ScalarProperty Name="descripcion_tipohabitacion" ColumnName="descripcion_tipohabitacion" />
+          <ScalarProperty Name="link" ColumnName="link" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tipo_usuario">
+      <EntityTypeMapping TypeName="pasaelda_PasaelDatoModel.tipo_usuario">
+        <MappingFragment StoreEntitySet="tipo_usuario">
+          <ScalarProperty Name="idtipousuario" ColumnName="idtipousuario" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tipohabitacion_x_sucursal">
+      <EntityTypeMapping TypeName="pasaelda_PasaelDatoModel.tipohabitacion_x_sucursal">
+        <MappingFragment StoreEntitySet="tipohabitacion_x_sucursal">
+          <ScalarProperty Name="idsucursal" ColumnName="idsucursal" />
+          <ScalarProperty Name="idtipo_habitacion" ColumnName="idtipo_habitacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usuario">
+      <EntityTypeMapping TypeName="pasaelda_PasaelDatoModel.usuario">
+        <MappingFragment StoreEntitySet="usuario">
+          <ScalarProperty Name="idusuario" ColumnName="idusuario" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="apellido" ColumnName="apellido" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="contrasena" ColumnName="contrasena" />
+          <ScalarProperty Name="idtipousuario" ColumnName="idtipousuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="comentario_x_producto" TypeName="pasaelda_PasaelDatoModel.comentario_x_producto" StoreEntitySet="comentario_x_producto">
+      <EndProperty Name="producto">
+        <ScalarProperty Name="idproducto" ColumnName="idproducto" />
+      </EndProperty>
+      <EndProperty Name="comentario">
+        <ScalarProperty Name="idcomentario" ColumnName="idcomentario" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="comentario_x_sucursal" TypeName="pasaelda_PasaelDatoModel.comentario_x_sucursal" StoreEntitySet="comentario_x_sucursal">
+      <EndProperty Name="comentario">
+        <ScalarProperty Name="idcomentario" ColumnName="idcomentario" />
+      </EndProperty>
+      <EndProperty Name="sucursal">
+        <ScalarProperty Name="idsucursal" ColumnName="idsucursal" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="imagen_x_producto" TypeName="pasaelda_PasaelDatoModel.imagen_x_producto" StoreEntitySet="imagen_x_producto">
+      <EndProperty Name="producto">
+        <ScalarProperty Name="idproducto" ColumnName="idproducto" />
+      </EndProperty>
+      <EndProperty Name="imagen_producto">
+        <ScalarProperty Name="idimagenproducto" ColumnName="idimagenproducto" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="servicio_sucursal" TypeName="pasaelda_PasaelDatoModel.servicio_sucursal" StoreEntitySet="servicio_sucursal">
+      <EndProperty Name="sucursal">
+        <ScalarProperty Name="idsucursal" ColumnName="idsucursal" />
+      </EndProperty>
+      <EndProperty Name="servicio_motel">
+        <ScalarProperty Name="idserviciomotel" ColumnName="id_serviciomotel" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="servicio_x_producto" TypeName="pasaelda_PasaelDatoModel.servicio_x_producto" StoreEntitySet="servicio_x_producto">
+      <EndProperty Name="producto">
+        <ScalarProperty Name="idproducto" ColumnName="idproducto" />
+      </EndProperty>
+      <EndProperty Name="servicio_habitacion">
+        <ScalarProperty Name="idserviciohabitacion" ColumnName="idserviciohabitacion" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <FunctionImportMapping FunctionImportName="MenuIndex" FunctionName="pasaelda_PasaelDatoModel.Store.MenuIndex">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="pasaelda_PasaelDatoModel.MenuIndex_Result">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idtipo_habitacion" ColumnName="idtipo_habitacion" />
+          <ScalarProperty Name="descripcion_tipohabitacion" ColumnName="descripcion_tipohabitacion" />
+          <ScalarProperty Name="link" ColumnName="link" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

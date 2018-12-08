@@ -1,0 +1,39 @@
+﻿@model IEnumerable<PasaElDato_v2.Models.imagen_sucursal>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.path_imagensucursal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sucursal.nombre)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.path_imagensucursal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sucursal.nombre)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idimagensucursal }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idimagensucursal }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idimagensucursal })
+        </td>
+    </tr>
+}
+
+</table>

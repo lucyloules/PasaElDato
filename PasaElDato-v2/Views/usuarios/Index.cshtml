@@ -1,0 +1,57 @@
+﻿@model IEnumerable<PasaElDato_v2.Models.usuario>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.apellido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.contrasena)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tipo_usuario.tipo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.apellido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.contrasena)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tipo_usuario.tipo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idusuario }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idusuario }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idusuario })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8c30a0917dbf4f1c83fa858484e1469c" Name="Diagram1">
+        <EntityTypeShape EntityType="pasaelda_PasaelDatoModel.categoria" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="pasaelda_PasaelDatoModel.comentario" Width="1.5" PointX="7.5" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="pasaelda_PasaelDatoModel.comuna" Width="1.5" PointX="10.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="pasaelda_PasaelDatoModel.direccion" Width="1.5" PointX="13" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pasaelda_PasaelDatoModel.email" Width="1.5" PointX="12" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="pasaelda_PasaelDatoModel.empresa" Width="1.5" PointX="7.5" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="pasaelda_PasaelDatoModel.estado" Width="1.5" PointX="6" PointY="22.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="pasaelda_PasaelDatoModel.horas" Width="1.5" PointX="8.25" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pasaelda_PasaelDatoModel.imagen_producto" Width="1.5" PointX="7.5" PointY="13.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="pasaelda_PasaelDatoModel.imagen_sucursal" Width="1.5" PointX="12" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="pasaelda_PasaelDatoModel.medios_pago" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pasaelda_PasaelDatoModel.producto" Width="1.5" PointX="5.25" PointY="9.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="pasaelda_PasaelDatoModel.puntaje" Width="1.5" PointX="3" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pasaelda_PasaelDatoModel.puntaje_x_categoria" Width="1.5" PointX="5.25" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="pasaelda_PasaelDatoModel.region" Width="1.5" PointX="8.5" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="pasaelda_PasaelDatoModel.reserva" Width="1.5" PointX="10.5" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pasaelda_PasaelDatoModel.restricciones" Width="1.5" PointX="3" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="pasaelda_PasaelDatoModel.servicio_habitacion" Width="1.5" PointX="7.5" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="pasaelda_PasaelDatoModel.servicio_motel" Width="1.5" PointX="12" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="pasaelda_PasaelDatoModel.sucursal" Width="1.5" PointX="9.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="pasaelda_PasaelDatoModel.telefono" Width="1.5" PointX="12" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="pasaelda_PasaelDatoModel.tipo_habitacion" Width="1.5" PointX="0.75" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="pasaelda_PasaelDatoModel.tipo_usuario" Width="1.5" PointX="3" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pasaelda_PasaelDatoModel.tipohabitacion_x_sucursal" Width="1.5" PointX="3" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="pasaelda_PasaelDatoModel.usuario" Width="1.5" PointX="5.25" PointY="15.125" IsExpanded="true" />
+        <AssociationConnector Association="pasaelda_PasaelDatoModel.Relationship43" ManuallyRouted="false" />
+        <AssociationConnector Association="pasaelda_PasaelDatoModel.FK_comentario_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="pasaelda_PasaelDatoModel.Relationship44" ManuallyRouted="false" />
+        <AssociationConnector Association="pasaelda_PasaelDatoModel.Relationship7" ManuallyRouted="false" />
+        <AssociationConnector Association="pasaelda_PasaelDatoModel.Relationship8" ManuallyRouted="false" />
+        <AssociationConnector Association="pasaelda_PasaelDatoModel.Relationship9" ManuallyRouted="false" />
+        <AssociationConnector Association="pasaelda_PasaelDatoModel.Relationship45" ManuallyRouted="false" />
+        <AssociationConnector Association="pasaelda_PasaelDatoModel.Relationship6" ManuallyRouted="false" />
+        <AssociationConnector Association="pasaelda_PasaelDatoModel.FK_horas_estado" ManuallyRouted="false" />
+        <AssociationConnector Association="pasaelda_PasaelDatoModel.FK_reserva_horas" ManuallyRouted="false" />
+        <AssociationConnector Association="pasaelda_PasaelDatoModel.Relationship15" ManuallyRouted="false" />
+        <AssociationConnector Association="pasaelda_PasaelDatoModel.FK_producto_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="pasaelda_PasaelDatoModel.FK_reserva_producto" ManuallyRouted="false" />
+        <AssociationConnector Association="pasaelda_PasaelDatoModel.Relationship14" ManuallyRouted="false" />
+        <AssociationConnector Association="pasaelda_PasaelDatoModel.Relationship25" ManuallyRouted="false" />
+        <AssociationConnector Association="pasaelda_PasaelDatoModel.Relationship42" ManuallyRouted="false" />
+        <AssociationConnector Association="pasaelda_PasaelDatoModel.FK_reserva_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="pasaelda_PasaelDatoModel.Relationship12" ManuallyRouted="false" />
+        <AssociationConnector Association="pasaelda_PasaelDatoModel.Relationship46" ManuallyRouted="false" />
+        <AssociationConnector Association="pasaelda_PasaelDatoModel.Relationship13" ManuallyRouted="false" />
+        <AssociationConnector Association="pasaelda_PasaelDatoModel.FK_usuario_tipo_usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="pasaelda_PasaelDatoModel.comentario_x_producto" ManuallyRouted="false" />
+        <AssociationConnector Association="pasaelda_PasaelDatoModel.comentario_x_sucursal" ManuallyRouted="false" />
+        <AssociationConnector Association="pasaelda_PasaelDatoModel.imagen_x_producto" ManuallyRouted="false" />
+        <AssociationConnector Association="pasaelda_PasaelDatoModel.servicio_sucursal" ManuallyRouted="false" />
+        <AssociationConnector Association="pasaelda_PasaelDatoModel.servicio_x_producto" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

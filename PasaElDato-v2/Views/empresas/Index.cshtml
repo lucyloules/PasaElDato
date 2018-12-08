@@ -1,0 +1,75 @@
+﻿@model IEnumerable<PasaElDato_v2.Models.empresa>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rut)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.giro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.historia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.path_imagenempresa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.link)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.path_imagen)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rut)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.giro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.historia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.path_imagenempresa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.link)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.path_imagen)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idempresa }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idempresa }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idempresa })
+        </td>
+    </tr>
+}
+
+</table>

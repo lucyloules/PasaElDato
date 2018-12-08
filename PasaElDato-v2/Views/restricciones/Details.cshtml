@@ -1,0 +1,66 @@
+﻿@model PasaElDato_v2.Models.restricciones
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>restricciones</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.restriccion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.restriccion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcion_horario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcion_horario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcion_fecha)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcion_fecha)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idproducto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idproducto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idsucursal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idsucursal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.precio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precio)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idrestriccion }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
